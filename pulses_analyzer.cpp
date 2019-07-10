@@ -58,7 +58,8 @@ using namespace std;
 int main(int argc, char** argv)
 {
 
-//   TApplication* theApp = new TApplication("App", &argc, argv);  
+  TApplication* theApp = new TApplication("App", &argc, argv);  TApplication a(“a”, 0, 0)
+
   
   std::string file_name  = "./root_files/";  
   file_name += std::string(argv[1]);
