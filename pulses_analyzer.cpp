@@ -2,6 +2,7 @@
 
 #include "VectorSmallestInterval.hh"
 #include "VectorSmallestInterval.cc"
+
 // #include "fitUtils.h"
 // #include "setTDRStyle.h"
 // #include "ConfigParser.h"
@@ -55,11 +56,13 @@
 using namespace std;
 
 
+
 int main(int argc, char** argv)
 {
 
-  TApplication* theApp = new TApplication("App", &argc, argv);  
+//  TApplication* theApp = new TApplication("App", &argc, argv);  
 
+  gROOT->ProcessLine("#include <vector>");
   
   std::string file_name  = "./root_files/";  
   file_name += std::string(argv[1]);
