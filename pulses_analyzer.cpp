@@ -60,7 +60,7 @@ using namespace std;
 int main(int argc, char** argv)
 {
 
-//  TApplication* theApp = new TApplication("App", &argc, argv);  
+//   TApplication* theApp = new TApplication("App", &argc, argv);  
 
   gROOT->ProcessLine("#include <vector>");
   
@@ -1024,9 +1024,9 @@ int main(int argc, char** argv)
 //       hTimeLED[iCh]->Draw("same");
       for (int iTh = 0; iTh< NTH; iTh++)
       {
-        for (int iR = 0; iR < 5; iR++)
+        for (int iR = 0; iR < 10; iR++)
         {
-            if (hTimeCFD[iCh][iTh]->GetBinContent(hTimeCFD[iCh][iTh]->GetMaximumBin() ) <30) hTimeCFD[iCh][iTh]->Rebin(2);
+            if (hTimeCFD[iCh][iTh]->GetBinContent(hTimeCFD[iCh][iTh]->GetMaximumBin() ) <60) hTimeCFD[iCh][iTh]->Rebin(2);
             else break;
         }
         TF1 * fitGaus = new TF1 ("fitGaus", "gaus", hTimeCFD[iCh][iTh]->GetMean()-hTimeCFD[iCh][iTh]->GetRMS(), hTimeCFD[iCh][iTh]->GetMean()+hTimeCFD[iCh][iTh]->GetRMS()*2);
@@ -1064,9 +1064,9 @@ int main(int argc, char** argv)
 //       hTimeLED[iCh]->Draw("same");
       for (int iTh = 0; iTh< NTH; iTh++)
       {
-        for (int iR = 0; iR < 5; iR++)
+        for (int iR = 0; iR < 10; iR++)
         {
-            if (hTimeCFD_sub[iCh][iTh]->GetBinContent(hTimeCFD_sub[iCh][iTh]->GetMaximumBin() ) <30) hTimeCFD_sub[iCh][iTh]->Rebin(2);
+            if (hTimeCFD_sub[iCh][iTh]->GetBinContent(hTimeCFD_sub[iCh][iTh]->GetMaximumBin() ) <60) hTimeCFD_sub[iCh][iTh]->Rebin(2);
             else break;
         }
         TF1 * fitGaus = new TF1 ("fitGaus", "gaus", hTimeCFD_sub[iCh][iTh]->GetMean()-hTimeCFD_sub[iCh][iTh]->GetRMS(), hTimeCFD_sub[iCh][iTh]->GetMean()+hTimeCFD_sub[iCh][iTh]->GetRMS()*2);
