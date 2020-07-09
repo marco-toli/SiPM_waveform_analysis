@@ -1,5 +1,7 @@
 # SiPM_waveform_analysis
-
+****************************************************************************
+Tools to process waveform in binary format acquired with LeCroy oscilloscope
+****************************************************************************
 
 0) Copy binary scope data to "data" folder
 
